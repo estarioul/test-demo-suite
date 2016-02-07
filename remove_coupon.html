@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://ec2-52-31-177-160.eu-west-1.compute.amazonaws.com/" />
+<title>remove_coupon</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">remove_coupon</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/open-eshop-2.0.1/oc-panel/Coupon</td>
+	<td></td>
+</tr>
+<tr>
+	<td>sendKeys</td>
+	<td>css=input[name=&quot;name&quot;]</td>
+	<td>${name_coupon}</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=form.form-inline &gt; button.btn</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForTable</td>
+	<td>//div[@id='content']//table.1.0</td>
+	<td>${name_coupon}</td>
+</tr>
+<tr>
+	<td>waitForXpathCount</td>
+	<td>//div[@id='content']//table//tr</td>
+	<td>2</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAt</td>
+	<td>css=div#content a.index-delete</td>
+	<td>20,20</td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=h2</td>
+	<td>exact:Are you sure you want to delete?</td>
+</tr>
+<tr>
+	<td>pause</td>
+	<td>1000</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=div.sweet-alert button.confirm</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>//div[@id='content']//table</td>
+	<td>Name Product Discount Number Coupons Valid until Created Actions</td>
+</tr>
+</tbody></table>
+</body>
+</html>
